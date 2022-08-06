@@ -14,6 +14,7 @@
 		F360E660289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F360E65E289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld */; };
 		F360E662289EDCB800C26D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F360E661289EDCB800C26D88 /* Assets.xcassets */; };
 		F360E665289EDCB800C26D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F360E663289EDCB800C26D88 /* LaunchScreen.storyboard */; };
+		F360E66E289EDD4000C26D88 /* Cocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360E66D289EDD4000C26D88 /* Cocktails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F360E661289EDCB800C26D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F360E664289EDCB800C26D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F360E666289EDCB800C26D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F360E66D289EDD4000C26D88 /* Cocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		F360E654289EDCB700C26D88 /* CocktailRecipesApp */ = {
 			isa = PBXGroup;
 			children = (
+				F360E66C289EDD2B00C26D88 /* Model */,
 				F360E655289EDCB700C26D88 /* AppDelegate.swift */,
 				F360E657289EDCB700C26D88 /* SceneDelegate.swift */,
 				F360E659289EDCB700C26D88 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				F360E65E289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld */,
 			);
 			path = CocktailRecipesApp;
+			sourceTree = "<group>";
+		};
+		F360E66C289EDD2B00C26D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F360E66D289EDD4000C26D88 /* Cocktails.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				F360E65A289EDCB700C26D88 /* ViewController.swift in Sources */,
 				F360E660289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld in Sources */,
+				F360E66E289EDD4000C26D88 /* Cocktails.swift in Sources */,
 				F360E656289EDCB700C26D88 /* AppDelegate.swift in Sources */,
 				F360E658289EDCB700C26D88 /* SceneDelegate.swift in Sources */,
 			);
