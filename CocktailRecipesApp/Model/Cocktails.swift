@@ -6,8 +6,11 @@
 //
 
 import Foundation
+struct Cocktails: Decodable{
+    let drinks: [Drinks]
+}
 
-struct Cocktails: Decodable {
+struct Drinks: Decodable {
     let strDrink: String
     let strAlcoholic: String
     let strGlass: String
