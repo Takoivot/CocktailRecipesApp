@@ -10,9 +10,13 @@ import UIKit
 class SearchViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
-
+    let cocktail = [Cocktails]()
+    
+    private let cellID = "cocktail"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         view.backgroundColor = .white
         setupNavBar()
         setupSearchBar()
@@ -36,6 +40,7 @@ class SearchViewController: UITableViewController {
 
 }
 
+//MARK: Search Bar Settings
 extension SearchViewController: UISearchBarDelegate {
     private func setupSearchBar() {
         navigationItem.searchController = searchController
@@ -44,5 +49,20 @@ extension SearchViewController: UISearchBarDelegate {
         searchController.searchBar.placeholder = "Enter what you want to drink"
         searchController.searchBar.searchTextField.textColor = .white
     }
+}
+
+//MARK: Table View Data Source
+extension SearchViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cocktail.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) else {return}
+                
+    }
+    
+    
 }
 
