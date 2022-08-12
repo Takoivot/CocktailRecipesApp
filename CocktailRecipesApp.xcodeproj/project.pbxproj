@@ -95,7 +95,7 @@
 				F360E655289EDCB700C26D88 /* AppDelegate.swift */,
 				F360E66F289EDDB000C26D88 /* Services */,
 				F360E66C289EDD2B00C26D88 /* Model */,
-				F360E67728A6808800C26D88 /* SearchViewControllers */,
+				F360E67728A6808800C26D88 /* SearchViewController */,
 				F360E661289EDCB800C26D88 /* Assets.xcassets */,
 				F360E663289EDCB800C26D88 /* LaunchScreen.storyboard */,
 				F360E666289EDCB800C26D88 /* Info.plist */,
@@ -122,14 +122,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		F360E67728A6808800C26D88 /* SearchViewControllers */ = {
+		F360E67728A6808800C26D88 /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
 				F360E67A28A69E4200C26D88 /* CocktailCell */,
 				F360E659289EDCB700C26D88 /* SearchViewController.swift */,
 				F360E67B28A6B47600C26D88 /* SearchViewModel.swift */,
 			);
-			path = SearchViewControllers;
+			path = SearchViewController;
 			sourceTree = "<group>";
 		};
 		F360E67A28A69E4200C26D88 /* CocktailCell */ = {
