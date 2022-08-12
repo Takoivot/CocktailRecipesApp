@@ -8,11 +8,14 @@
 import UIKit
 
 class SearchViewController: UITableViewController {
+    
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavBar()
+        setupSearchBar()
         
     }
     
@@ -31,5 +34,15 @@ class SearchViewController: UITableViewController {
     }
 
 
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Enter what you want to drink"
+        searchController.searchBar.searchTextField.textColor = .white
+    }
 }
 
