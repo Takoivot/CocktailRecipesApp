@@ -11,7 +11,6 @@
 		F360E656289EDCB700C26D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360E655289EDCB700C26D88 /* AppDelegate.swift */; };
 		F360E658289EDCB700C26D88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360E657289EDCB700C26D88 /* SceneDelegate.swift */; };
 		F360E65A289EDCB700C26D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F360E659289EDCB700C26D88 /* ViewController.swift */; };
-		F360E65D289EDCB700C26D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F360E65B289EDCB700C26D88 /* Main.storyboard */; };
 		F360E660289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F360E65E289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodeld */; };
 		F360E662289EDCB800C26D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F360E661289EDCB800C26D88 /* Assets.xcassets */; };
 		F360E665289EDCB800C26D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F360E663289EDCB800C26D88 /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 		F360E655289EDCB700C26D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F360E657289EDCB700C26D88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F360E659289EDCB700C26D88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F360E65C289EDCB700C26D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F360E65F289EDCB700C26D88 /* CocktailRecipesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CocktailRecipesApp.xcdatamodel; sourceTree = "<group>"; };
 		F360E661289EDCB800C26D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F360E664289EDCB800C26D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 				A27EDFB8B8C5E3A686489BFE /* Pods-CocktailRecipesApp.debug.xcconfig */,
 				B93C68F409297291538F60A0 /* Pods-CocktailRecipesApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,7 +93,6 @@
 				F360E655289EDCB700C26D88 /* AppDelegate.swift */,
 				F360E657289EDCB700C26D88 /* SceneDelegate.swift */,
 				F360E659289EDCB700C26D88 /* ViewController.swift */,
-				F360E65B289EDCB700C26D88 /* Main.storyboard */,
 				F360E661289EDCB800C26D88 /* Assets.xcassets */,
 				F360E663289EDCB800C26D88 /* LaunchScreen.storyboard */,
 				F360E666289EDCB800C26D88 /* Info.plist */,
@@ -185,7 +181,6 @@
 			files = (
 				F360E665289EDCB800C26D88 /* LaunchScreen.storyboard in Resources */,
 				F360E662289EDCB800C26D88 /* Assets.xcassets in Resources */,
-				F360E65D289EDCB700C26D88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F360E65B289EDCB700C26D88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F360E65C289EDCB700C26D88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F360E663289EDCB800C26D88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -398,7 +385,6 @@
 				INFOPLIST_FILE = CocktailRecipesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,7 +413,6 @@
 				INFOPLIST_FILE = CocktailRecipesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
