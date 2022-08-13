@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchViewModelProtocol {
-    var drinks: [Drinks] {get}
+    var drink: [Drinks] {get}
     
     func fetchDrinks(completions: @escaping() -> Void)
     func numberOfRows() -> Int
@@ -16,21 +16,23 @@ protocol SearchViewModelProtocol {
 }
 
 class SearchViewModel: SearchViewModelProtocol {
-    var drinks: [Drinks] = []
+    var drink:[Drinks] = []
+    
     
     func fetchDrinks(completions: @escaping () -> Void) {
-        NetworkManager.shared.fetchCocktails { cocktails in
-            self.drinks = cocktails
+        NetworkManager.shared.fetchCocktails() { cocktails in
+            self.drink = cocktails 
             completions()
+            
         }
     }
     
     func numberOfRows() -> Int {
-        drinks.count
+        drink.count
     }
     
     func cellViewModel(at indexPath: IndexPath) -> CocktailCellViewModelProtocol {
-        let drink = drinks[indexPath.row]
+        let drink = drink[indexPath.row]
         return CocktailCellViewModel(drink: drink)
     }
     

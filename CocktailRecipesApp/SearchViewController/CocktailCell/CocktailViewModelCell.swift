@@ -17,7 +17,7 @@ protocol CocktailCellViewModelProtocol {
 class CocktailCellViewModel: CocktailCellViewModelProtocol {
     
     var cocktailName: String {
-        drink.strDrink
+        drink.strDrink ?? "no name"
     }
     
     var imageData: Data? {

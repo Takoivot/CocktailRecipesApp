@@ -6,18 +6,18 @@
 //
 
 import Foundation
-struct Cocktails: Decodable{
+struct CocktailsMenu: Codable{
     let drinks: [Drinks]
 }
 
-struct Drinks: Decodable {
-    let strDrink: String
-    let strAlcoholic: String
-    let strGlass: String
-    let strInstructions: String
+struct Drinks: Codable{
+    let strDrink: String?
+    let strAlcoholic: String?
+    let strGlass: String?
+    let strInstructions: String?
     let strDrinkThumb: URL?
     
-    let strIngredient1: String
+    let strIngredient1: String?
     let strIngredient2: String?
     let strIngredient3: String?
     let strIngredient4: String?
@@ -33,7 +33,7 @@ struct Drinks: Decodable {
     let strIngredient14: String?
     let strIngredient15: String?
     
-    let strMeasure1: String
+    let strMeasure1: String?
     let strMeasure2: String?
     let strMeasure3: String?
     let strMeasure4: String?

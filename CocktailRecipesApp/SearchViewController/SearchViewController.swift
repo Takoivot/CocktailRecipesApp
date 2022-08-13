@@ -10,16 +10,24 @@ import UIKit
 class SearchViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
-    let cocktail = [Cocktails]()
     
     private let cellID = "cocktail"
     
+    private var viewModel: SearchViewModelProtocol? {
+        didSet{
+            viewModel?.fetchDrinks {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SearchViewModel()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         view.backgroundColor = .white
         setupNavBar()
-        setupSearchBar()
+        //setupSearchBar()
         
     }
     
@@ -41,6 +49,7 @@ class SearchViewController: UITableViewController {
 }
 
 //MARK: Search Bar Settings
+/*
 extension SearchViewController: UISearchBarDelegate {
     private func setupSearchBar() {
         navigationItem.searchController = searchController
@@ -49,14 +58,30 @@ extension SearchViewController: UISearchBarDelegate {
         searchController.searchBar.placeholder = "Enter what you want to drink"
         searchController.searchBar.searchTextField.textColor = .white
     }
-}
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        NetworkManager.shared.fetchCocktails(searchText: searchText) { cocktail in
+            self.viewModel?.fetchDrinks {
+                self.tableView.reloadData()
+            }
+        }
+    }
+} */
 
 //MARK: Table View Data Source
 extension SearchViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cocktail.count
+        viewModel?.numberOfRows() ?? 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? CocktailCell else { return UITableViewCell()}
+        cell.viewModel = viewModel?.cellViewModel(at: indexPath)
+        
+        return cell
     }
 
 }
+
 
